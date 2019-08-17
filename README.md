@@ -28,7 +28,7 @@ ObliComm supports both on Windows and Linux OS, and has two deployment modes: st
    kgen.init(128, secureRandom);`
    While for Windows OS, you need to use `kgen.init(128, new SecureRandom(password.getBytes()));`
 
-**Step 5**: Run the jar package using the command ''*java -jar + [ObliComm Path] + [1(Client) / 2(Server) / 3(MailBox)] + [1([IP Address] + [ThreadNumber]) / 2([IP Address] + [port]) / 3([IP Address] + [port])]*'', and you will find a *latency* file in the root directory running clients.
+**Step 5**: Run the jar package using the command ''*java -jar + [ObliComm Path] + [1(Client) / 2(Server) / 3(MailBox)] + [1([IP Address] + [ThreadNumber]) / 2([IP Address] + [port]) / 3([IP Address] + [port])]*'', and you will find a *latency* file in the root directory of hosts running clients.
 
 ## Demo Video
 
