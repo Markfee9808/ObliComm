@@ -32,7 +32,7 @@ ObliComm supports both on Windows and Linux OS, and has two deployment modes: st
 
 ## Demo Video
 
-A 3-minute video has been uploaded to show our demo ([online available]()).
+A 3-minute video has been uploaded to show our demo ([online available](https://github.com/Markfee9808/ObliComm/blob/master/Demo%20Video.mp4)).
 
 ## Related Link
 
