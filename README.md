@@ -8,7 +8,7 @@ ObliComm is a modular anonymous communication (AC) framework that protects the p
 
 ## Deployment Request
 
-Java JDK version 1.8 ([online available]([https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)))
+Java JDK version 1.8 ([online available](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
 
 ## How to Run?
 
@@ -34,6 +34,6 @@ A 3-minute video has been uploaded to show our demo ([online available]()).
 
 ## Related Link
 
- - [Vuvuzela]([https://github.com/vuvuzela/vuvuzela](https://github.com/vuvuzela/vuvuzela))
- - [Stadium]([https://github.com/nirvantyagi/stadium](https://github.com/nirvantyagi/stadium))
- - [Loopix]([https://github.com/UCL-InfoSec/loopix](https://github.com/UCL-InfoSec/loopix))
+ - [Vuvuzela](https://github.com/vuvuzela/vuvuzela)
+ - [Stadium](https://github.com/nirvantyagi/stadium)
+ - [Loopix](https://github.com/UCL-InfoSec/loopix)
