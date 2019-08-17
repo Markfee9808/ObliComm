@@ -20,7 +20,7 @@ ObliComm supports both on Windows and Linux OS, and has two deployment modes: st
 > **Note**:   For stand-alone mode, you can use *localhost* (i.e., 127.0.0.1) and choose different ports for servers and mailboxes.
  
 **Step 4**: Compile ObliComm and get a jar package.
-> **Note**:  For Linux OS, you need to use the following key generation codes in *"~/Crypto/AesDecryption.java"* to handle BadPaddingException. See [here]([https://stackoverflow.com/questions/8049872/given-final-block-not-properly-padded](https://stackoverflow.com/questions/8049872/given-final-block-not-properly-padded)) for more information.
+> **Note**:  For Linux OS, you need to use the following key generation codes in *"~/Crypto/AesDecryption.java"* to handle BadPaddingException. See [here](https://stackoverflow.com/questions/8049872/given-final-block-not-properly-padded) for more information.
 > `SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
 > secureRandom.setSeed(password.getBytes());
    kgen.init(128, secureRandom);`
