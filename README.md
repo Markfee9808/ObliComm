@@ -34,8 +34,15 @@ ObliComm supports both on Windows and Linux OS, and has two deployment modes: st
 
 A 3-minute video has been uploaded to show our demo ([online available](https://github.com/Markfee9808/ObliComm/blob/master/Demo%20Video.mp4)).
 
-## Related Link
+## Contact us
+
+Pengfei Wu, School of Software and Microelectronics, Peking University, Beijing, China
+
+e-mail: wpf9808@pku.edu.cn
+
+## See also
 
  - [Vuvuzela](https://github.com/vuvuzela/vuvuzela)
  - [Stadium](https://github.com/nirvantyagi/stadium)
  - [Loopix](https://github.com/UCL-InfoSec/loopix)
+ 
