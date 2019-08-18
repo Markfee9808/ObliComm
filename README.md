@@ -16,7 +16,7 @@ ObliComm supports both on Windows and Linux OS, and has two deployment modes: st
 
 **Step 1**: Configure a static IP for each host involving in anonymous communication.
 
-**Step 2**: Copy ObliComm to the directory with execute right of each hosts.
+**Step 2**: Copy ObliComm to the directory with execute right in each host.
 
 **Step 3**: Define the network topology in file *"~/Main/NetworkTopology.java"*.
 > **Note**:   For stand-alone mode, you can use *localhost* (i.e., 127.0.0.1) and choose different ports for servers and mailboxes.
