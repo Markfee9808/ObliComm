@@ -1,6 +1,6 @@
 # ObliComm
 
-ObliComm is a modular anonymous communication (AC) framework that protects the privacy of message contents and message metadata. Users can customize communication network in different topologies and test their latency. ObliComm consists of three parts:
+ObliComm is a modular anonymous communication (AC) framework that protects the privacy of message contents and message metadata. Users can customize communication network in different topologies and test their latency. ObliComm consists of three components:
 
  - User: send messages at a specified frequency, and receive replies from mailbox
  - Server: decrypt and delay received messages, forward and backward transmission
@@ -12,7 +12,7 @@ Java JDK version 1.8 ([online available](https://www.oracle.com/technetwork/java
 
 ## How to Run?
 
-ObliComm supports both on Windows and Linux OS, and has two deployment modes: stand-alone mode (i.e., run three parts on a single host) and distributed mode (i.e., run three parts on different hosts).
+ObliComm supports both on Windows and Linux OS, and has two deployment modes: stand-alone mode (i.e., run three components on a single host) and distributed mode (i.e., run three components on different hosts).
 
 **Step 1**: Configure a static IP for each host involving in anonymous communication.
 
