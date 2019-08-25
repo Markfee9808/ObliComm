@@ -23,7 +23,7 @@ ObliComm supports both on Windows and Linux OS, and has two deployment modes: st
  
 **Step 4**: Compile ObliComm and get a jar package.
 > **Note**:  For Linux OS, you need to use the following key generation codes in *"~/Crypto/AesDecryption.java"* to handle BadPaddingException. 
-> `SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG"); secureRandom.setSeed(password.getBytes()); kgen.init(128, secureRandom);` While for Windows OS, you need to use `kgen.init(128, new SecureRandom(password.getBytes()));` See [here](https://stackoverflow.com/questions/8049872/given-final-block-not-properly-padded) for more information.
+> `SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG"); secureRandom.setSeed(password.getBytes()); kgen.init(128, secureRandom);` While for Windows OS, use `kgen.init(128, new SecureRandom(password.getBytes()));` instead. See [here](https://stackoverflow.com/questions/8049872/given-final-block-not-properly-padded) for more information.
 
 **Step 5**: Run the jar package using the command ''`java -jar + [ObliComm Path] + [1(Client) / 2(Server) / 3(MailBox)] + [1([IP Address] + [ThreadNumber]) / 2([IP Address] + [port]) / 3([IP Address] + [port])]`'', and you will find a *latency* file in the root directory of hosts running clients.
 
