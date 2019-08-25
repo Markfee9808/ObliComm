@@ -14,12 +14,12 @@ Java JDK version 1.8 ([online available](https://www.oracle.com/technetwork/java
 
 ObliComm supports both on Windows and Linux OS, and has two deployment modes: stand-alone mode (i.e., run three components on a single host) and distributed mode (i.e., run three components on different hosts).
 
-**Step 1**: Configure a static IP for each host involving in anonymous communication.
+**Step 1**: Configure a static IP address for each host involving in anonymous communication.
 
 **Step 2**: Copy ObliComm to the directory with execute right in each host.
 
 **Step 3**: Define the network topology in file *"~/Main/NetworkTopology.java"*.
-> **Note**:   For stand-alone mode, you can use *localhost* (i.e., 127.0.0.1) and choose different ports for servers and mailboxes.
+> **Note**:   For stand-alone mode, you may use *localhost* (i.e., 127.0.0.1) and choose different ports for servers and mailboxes.
  
 **Step 4**: Compile ObliComm and get a jar package.
 > **Note**:  For Linux OS, you need to use the following key generation codes in *"~/Crypto/AesDecryption.java"* to handle BadPaddingException. 
