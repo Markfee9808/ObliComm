@@ -49,7 +49,7 @@ public class FindSocketAndSendSync {
 						} else {
 							message = msgTokenID + "-" + msgContentInCipher + "-" + msgPath + "-" + roundID + "-"
 									+ isForward + "-" + timeStamp; // construct the message
-							long delay = ExponentialNumberGenerator.exponentialSample(meanDelay) * 1000;
+							long delay = (long)(ExponentialNumberGenerator.exponentialSample(meanDelay) * 1000);
 							delayAndSendMsg(socketPool.get(i), message, delay);
 						}
 						
@@ -75,7 +75,7 @@ public class FindSocketAndSendSync {
 					} else {
 						message = msgTokenID + "-" + msgContentInCipher + "-" + msgPath + "-" + roundID + "-"
 								+ isForward + "-" + timeStamp; // construct the message
-						long delay = ExponentialNumberGenerator.exponentialSample(meanDelay) * 1000;
+						long delay = (long)(ExponentialNumberGenerator.exponentialSample(meanDelay) * 1000);
 						delayAndSendMsg(socket, message, delay);
 					}
 					// System.out.println(df.format(new Date()) + threadName + " in " + hostName + "
@@ -98,7 +98,7 @@ public class FindSocketAndSendSync {
 				} else {
 					message = msgTokenID + "-" + msgContentInCipher + "-" + msgPath + "-" + roundID + "-" + isForward
 							+ "-" + timeStamp; // construct the message
-					long delay = ExponentialNumberGenerator.exponentialSample(meanDelay) * 1000;
+					long delay = (long)(ExponentialNumberGenerator.exponentialSample(meanDelay) * 1000);
 					delayAndSendMsg(socket, message, delay);
 				}
 				// System.out.println(df.format(new Date()) + threadName + " in " + hostName + "
