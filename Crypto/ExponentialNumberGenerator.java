@@ -7,7 +7,7 @@ package Crypto;
 public class ExponentialNumberGenerator {
 	
 	public static int exponentialSample(double lambda) {
-		return (int) ((int) -(1 / lambda) * Math.log(Math.random()));
+		return ((int) -(1 / lambda) * Math.log(Math.random()));
 	}
 
 	public static void main(String[] args) {
