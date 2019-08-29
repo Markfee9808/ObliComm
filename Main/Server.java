@@ -123,7 +123,9 @@ public class Server implements Runnable {
 		}, roundTime, 1, TimeUnit.MILLISECONDS);
 		
 		
-		// to avoid the full load of CPU, you also could choose the following code. 
+		// to avoid the full load of CPU, you also could choose the following code and add "break" in ServerDecryptAndSendMsgThread.java 
+		// if the thread does not find any message in serverMsgProcessQueue
+		
 		/*scheduledThreadPool.scheduleAtFixedRate(new Runnable() {
 			@SuppressWarnings("unchecked")
 			public void run() {
