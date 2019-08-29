@@ -26,7 +26,6 @@ public class FindSocketAndSendSync {
 			int destServerPort, String serverHost, boolean isClient, String msgTokenID, String msgContentInCipher,
 			String msgPath, int roundID, int isForward, String timeStamp, ArrayList<String> msgReceiveStorage, boolean isMailbox)
 			throws IOException {
-		synchronized (FindSocketAndSendSync.class) {
 			boolean findSocket = false;
 			if (socketPool.size() != 0) {
 				for (int i = 0; i < socketPool.size(); i++) {
@@ -107,8 +106,6 @@ public class FindSocketAndSendSync {
 				new Thread(new BackwardMsgReceiveThread(socket, msgReceiveStorage)).start();
 			}
 			findSocket = false;
-		}
-
 	}
 
 	/*
@@ -116,9 +113,11 @@ public class FindSocketAndSendSync {
 	 */
 	
 	public void sendMsg(Socket socket, String message) throws IOException {
-		BufferedWriter bufout = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-		bufout.write(message + '\n');
-		bufout.flush();
+		synchronized (FindSocketAndSendSync.class) {
+			BufferedWriter bufout = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+			bufout.write(message + '\n');
+			bufout.flush();
+		}
 	}
 	
 	/*
@@ -130,9 +129,11 @@ public class FindSocketAndSendSync {
 		timer.schedule(new TimerTask() {
 			public void run() {	
 				try {
-					BufferedWriter bufout = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-					bufout.write(message + '\n');
-					bufout.flush();
+					synchronized (FindSocketAndSendSync.class) {
+						BufferedWriter bufout = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+						bufout.write(message + '\n');
+						bufout.flush();
+					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}			
