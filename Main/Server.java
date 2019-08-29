@@ -94,8 +94,37 @@ public class Server implements Runnable {
 				msgReceivedNumberInSecond = 0;
 			}
 		}, 0, roundTime, TimeUnit.SECONDS);
+		
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				ServerDecryptAndSendMsgThread[] dt = new ServerDecryptAndSendMsgThread[serverDecryptAndSendMsgThreadNum];
+				for (int i = 0; i < dt.length; i++) {
+					FindSocketAndSendSync send = new FindSocketAndSendSync();
+					dt[i] = new ServerDecryptAndSendMsgThread("ServerDecryptAndSendMsgThread " + i, serverName,
+							send, serverMsgProcessQueue, serverSocketPool, msgPassword, serverMsgReceivedStorage);
+					new Thread(dt[i]).start();
+				}
+			}
+		}).start();
 
 		scheduledThreadPool.scheduleAtFixedRate(new Runnable() {
+			@SuppressWarnings("unchecked")
+			public void run() {
+				synchronized (serverMsgReceivedStorage) {
+					serverMsgProcessQueue.addAll(serverMsgReceivedStorage);
+					if (serverMsgReceivedStorage.size() > 0) {
+						msgReceivedNumberInTotal += serverMsgReceivedStorage.size();
+						msgReceivedNumberInSecond += serverMsgReceivedStorage.size();
+					}
+					serverMsgReceivedStorage.clear();
+				}
+			}
+		}, roundTime, 1, TimeUnit.MILLISECONDS);
+		
+		
+		// to avoid the full load of CPU, you also could choose the following code. 
+		/*scheduledThreadPool.scheduleAtFixedRate(new Runnable() {
 			@SuppressWarnings("unchecked")
 			public void run() {
 				synchronized (serverMsgReceivedStorage) {
@@ -114,7 +143,7 @@ public class Server implements Runnable {
 					}
 				}
 			}
-		}, roundTime, 1, TimeUnit.MILLISECONDS);
+		}, roundTime, 1, TimeUnit.MILLISECONDS);*/
 	}
 
 	public void start() {
