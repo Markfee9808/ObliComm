@@ -48,8 +48,6 @@ public class ServerDecryptAndSendMsgThread implements Runnable {
 				if (serverMsgProcessQueue.size() > 0) {
 					cipher = serverMsgProcessQueue.get(0);
 					serverMsgProcessQueue.remove(0);
-				} else {
-					break;
 				}
 			}
 			if (cipher != null) {
