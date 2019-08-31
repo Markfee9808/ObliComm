@@ -16,16 +16,15 @@ ObliComm supports both on Windows and Linux OS, and has two deployment modes: st
 
 **Step 1**: Configure a static IP address for each host involving in anonymous communication.
 
-**Step 2**: Copy ObliComm to the directory with execute right in each host.
+**Step 2**: Copy ObliComm to the directory with executing right on each host.
 
 **Step 3**: Define the network topology in file *"~/Main/NetworkTopology.java"*.
-> **Note**:   For stand-alone mode, you may use *localhost* (i.e., 127.0.0.1) and choose different ports for servers and mailboxes.
  
-**Step 4**: Compile ObliComm and get a jar package.
+**Step 4**: Compile ObliComm and get a .jar package.
 > **Note**:  For Linux OS, you need to use the following key generation codes in *"~/Crypto/AesDecryption.java"* to handle BadPaddingException. 
 > `SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG"); secureRandom.setSeed(password.getBytes()); kgen.init(128, secureRandom);` While for Windows OS, use `kgen.init(128, new SecureRandom(password.getBytes()));` instead. See [here](https://stackoverflow.com/questions/8049872/given-final-block-not-properly-padded) for more information.
 
-**Step 5**: Run the jar package using the command ''`java -jar + [ObliComm Path] + [1(Client) / 2(Server) / 3(MailBox)] + [1([IP Address] + [ThreadNumber]) / 2([IP Address] + [port]) / 3([IP Address] + [port])]`'', and you will find a *latency* file in the root directory of hosts running clients.
+**Step 5**: Run the jar package using the command ''`java -jar + [ObliComm Path] + [1(Client) / 2(Server) / 3(MailBox)] + [1([IP Address] + [ThreadNumber]) / 2([IP Address] + [port]) / 3([IP Address] + [port])]`'', and you will find a *"latency"* file in the root directory of hosts running clients.
 
 ## Demo Video
 
@@ -39,7 +38,6 @@ e-mail: wpf9808@pku.edu.cn
 
 ## See also
 
- - [Vuvuzela](https://github.com/vuvuzela/vuvuzela)
  - [Stadium](https://github.com/nirvantyagi/stadium)
  - [Loopix](https://github.com/UCL-InfoSec/loopix)
  
