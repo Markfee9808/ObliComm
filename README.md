@@ -4,7 +4,7 @@ ObliComm is a modular anonymous communication (AC) framework that protects the p
 
  - Client: send messages at a specified frequency, and receive replies from mailbox
  - Server: decrypt and delay received messages, forward and backward transmission
- - Mailbox: after receiving a message/request, send a reply back to user
+ - Mailbox: after receiving a message/request, send a reply back to the client
 
 ## Deployment Request
 
