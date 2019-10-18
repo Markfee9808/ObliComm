@@ -32,6 +32,8 @@ A 3-minute video has been uploaded to show our demo ([online available](https://
 
 ## Contact us
 
+If any bugs are found, please contact:
+
 Pengfei Wu, School of Software and Microelectronics, Peking University, Beijing, China
 
 e-mail: wpf9808@pku.edu.cn
